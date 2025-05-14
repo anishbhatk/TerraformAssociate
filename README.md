@@ -3,12 +3,12 @@ Terraform Associate Certification Tips
 
 I have recently cleared the Terraform Associate Certification. Here are the steps you can follow to prepare effectively:
 
-Questions to answer : 57__  
+Questions to answer : 57  
 
-Type of questions expected: 
-    a) True or False
-    b) Multiple Choice questions
-    c) Fill in the blanks. (Here you need to write terraform commands). 
+Type of questions expected:  
+    a) True or False  
+    b) Multiple Choice questions  
+    c) Fill in the blanks. (Here you need to write terraform commands).   
 
 1. Understand the core terraform workflow.
 -> Here you need to understand how terraform workflow works. terraform init, terraform fmt, terraform plan, terraform apply, terraform destroy. This is the basic workflow of terraform.
