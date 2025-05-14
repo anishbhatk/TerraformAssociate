@@ -16,7 +16,7 @@ Type of questions expected:
 2. Understand the purpose of terraform (v/s Other IAC Tools)  
 -> Here the person needs to understand the advantages of using Terraform over other tools.   
    For eg you will encounter something like this:  
-   What advantages does Terraform offer over using a provider's native tooling for deploying resources in multi-cloud environments? (select three)
+   What advantages does Terraform offer over using a provider's native tooling for deploying resources in multi-cloud environments? (select three)  
    Options:  
      a) Terraform can help businesses deploy applications on multiple clouds and on-premises infrastructure  
      b) Terraform is not cloud-agnostic and can only be used to deploy resources across a single public cloud at a time  
@@ -32,66 +32,66 @@ Type of questions expected:
    Example: A child module created a new subnet for some workloads. What terraform block allows to pass the value to parent module?  
    Ans: Output block.  
    
-5. Implementing and maintaining the state.
--> Understand state locking and its importance in real-time.
-   Example: If multiple developers are working on a same statefile, what remote feature is critical to ensure the state doesnot become corrupt?
-   Ans: Statelocking
-   Also remember that terrform statefile contains sensitive data. The statefile is stored in the current directory.
+5. Implementing and maintaining the state.  
+-> Understand state locking and its importance in real-time.  
+   Example: If multiple developers are working on a same statefile, what remote feature is critical to ensure the state doesnot become corrupt?  
+   Ans: Statelocking  
+   Also remember that terrform statefile contains sensitive data. The statefile is stored in the current directory.  
 
-6.  Using Terraform Outside of Core workflow.
--> Here you expect the questions something like this:
+6.  Using Terraform Outside of Core workflow.  
+-> Here you expect the questions something like this:  
    Mr.X is working on infrastructure manually and the company decided to move to IAC. So how can you ensure that existing resources are managed by terraform 
-   without causing interruption to existing resources?
-   Ans: Use terraform import.
-   Note: Before terraform import we need to update the configuration file to include the new resources that matches the resources you want to import. 
+   without causing interruption to existing resources?  
+   Ans: Use terraform import.  
+   Note: Before terraform import we need to update the configuration file to include the new resources that matches the resources you want to import.   
 
-7. Read, Generate and Modify the configuration.
+7. Read, Generate and Modify the configuration.  
 -> Here you need to have the understanding of writing the terraform configuration files and what follows after which one. Go through how data block is used and how 
-   it is used in real world scenarios.
-   Example: Given a Terraform config that includes the following code, how would you reference the last instance that will be created?
+   it is used in real world scenarios.  
+   Example: Given a Terraform config that includes the following code, how would you reference the last instance that will be created?  
 
 
 
-resource "aws_instance" "database" {
+resource "aws_instance" "database" {  
   # ...
-  for_each = {
-    "vault": "secrets",
-    "terraform": "infrastructure",
-    "consul": "networking",
-    "nomad": "scheduler"
-  }
-}
+  for_each = {  
+    "vault": "secrets",  
+    "terraform": "infrastructure",  
+    "consul": "networking",  
+    "nomad": "scheduler"  
+  }  
+}  
+ 
+Ans: aws_instance.database["nomad"]  
 
-Ans: aws_instance.database["nomad"]
-
-8. Understand Terraform Cloud Capabilities.
+8. Understand Terraform Cloud Capabilities.  
 -> Here you can expect the concepts of Policy of Code. Questions on Terraform CLI vs Hashicorp Terraform can be expected and sentinel policy usecases can be 
-   expected here.
-   Example:
-       a) What is the primary function of HCP Terraform agents?
-       Ans: Execute Terraform plans and apply changes to the infrastructure.
+   expected here.  
+   Example:  
+       a) What is the primary function of HCP Terraform agents?  
+       Ans: Execute Terraform plans and apply changes to the infrastructure.  
        b) Which feature of HCP Terraform can be used to enforce fine-grained policies to enforce standardization and cost controls before resources are provisioned 
-          with Terraform?
-       Ans: Sentinel and OPA
+          with Terraform?  
+       Ans: Sentinel and OPA  
 
 
-Some important points to remember:
+Some important points to remember: 
 
-a) If you get a question on validating the configuration, modules and to report errors, then choose "terraform validate". 
-b) Question on rewriting the config files to canonical format and style choose "terraform fmt".
-c) To launch an interactive console to evaluate and experiment with expressions choose "terraform console".
-d) A question on variable types in terraform. Here float is not a part of it.
-e) Version ~> "1.35.0" . This only supports minor version change not major changes. 
-   Means this supports version "1.35.2" not version "1.36.0".
-f) Understand when to use "terraform apply -replace" and "terraform state rm".
-g) A question switching or creating a terraform workspace. ( "terraform workspace new" to create, "terraform workspace select" to choose)   
-h) What env variable can be set to enable detailed logging?
-   Since it requires detailed logging, choose "TF_LOG" with TRACE is the most "VERBOSE" . Remember the word verbose here.
-i) Commands to remember:
-terraform init -upgrade : to initialise the configurations and modules to the latest version.
-terraform plan -out=file_name : this saves the plan output to a particular file name.
-terraform apply -replace : to mark the resource for replacement.
-terraform plan -refresh-only : to refresh the state
-terraform apply -destroy : to destroy the resources/
+a) If you get a question on validating the configuration, modules and to report errors, then choose "terraform validate".   
+b) Question on rewriting the config files to canonical format and style choose "terraform fmt".  
+c) To launch an interactive console to evaluate and experiment with expressions choose "terraform console".  
+d) A question on variable types in terraform. Here float is not a part of it.  
+e) Version ~> "1.35.0" . This only supports minor version change not major changes.   
+   Means this supports version "1.35.2" not version "1.36.0".  
+f) Understand when to use "terraform apply -replace" and "terraform state rm".  
+g) A question switching or creating a terraform workspace. ( "terraform workspace new" to create, "terraform workspace select" to choose)     
+h) What env variable can be set to enable detailed logging?  
+   Since it requires detailed logging, choose "TF_LOG" with TRACE is the most "VERBOSE" . Remember the word verbose here.  
+i) Commands to remember:  
+terraform init -upgrade : to initialise the configurations and modules to the latest version.  
+terraform plan -out=file_name : this saves the plan output to a particular file name.  
+terraform apply -replace : to mark the resource for replacement.  
+terraform plan -refresh-only : to refresh the state.  
+terraform apply -destroy : to destroy the resources.  
 terraform plan -destroy : to generate the plan of destroying resources
 terraform graph : for visual representation of a configuration.
