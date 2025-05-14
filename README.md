@@ -10,27 +10,27 @@ Type of questions expected:
     b) Multiple Choice questions  
     c) Fill in the blanks. (Here you need to write terraform commands).   
 
-1. Understand the core terraform workflow.
+1. Understand the core terraform workflow.  
 -> Here you need to understand how terraform workflow works. terraform init, terraform fmt, terraform plan, terraform apply, terraform destroy. This is the basic workflow of terraform.
 
-2. Understand the purpose of terraform (v/s Other IAC Tools)
--> Here the person needs to understand the advantages of using Terraform over other tools. 
-   For eg you will encounter something like this:
+2. Understand the purpose of terraform (v/s Other IAC Tools)  
+-> Here the person needs to understand the advantages of using Terraform over other tools.   
+   For eg you will encounter something like this:  
    What advantages does Terraform offer over using a provider's native tooling for deploying resources in multi-cloud environments? (select three)
-   Options:
-     a) Terraform can help businesses deploy applications on multiple clouds and on-premises infrastructure
-     b) Terraform is not cloud-agnostic and can only be used to deploy resources across a single public cloud at a time
-     c) Terraform can manage cross-cloud dependencies
-     d) Terraform simplifies management and orchestration, helping operators build large-scale, multi-cloud infrastructure
+   Options:  
+     a) Terraform can help businesses deploy applications on multiple clouds and on-premises infrastructure  
+     b) Terraform is not cloud-agnostic and can only be used to deploy resources across a single public cloud at a time  
+     c) Terraform can manage cross-cloud dependencies  
+     d) Terraform simplifies management and orchestration, helping operators build large-scale, multi-cloud infrastructure  
 
-3. Understand the Infrastructure as Code.
--> Here you need to understand how IAC is helping organizations in real world scenarios.
+3. Understand the Infrastructure as Code.  
+-> Here you need to understand how IAC is helping organizations in real world scenarios.  
 
-4. Interact with Terraform Modules.
--> Understand about modules and know where the modules are stored by default.
-   Also how the value of one module can be referenced in another module.
-   Example: A child module created a new subnet for some workloads. What terraform block allows to pass the value to parent module?
-   Ans: Output block.
+4. Interact with Terraform Modules.  
+-> Understand about modules and know where the modules are stored by default.  
+   Also how the value of one module can be referenced in another module.  
+   Example: A child module created a new subnet for some workloads. What terraform block allows to pass the value to parent module?  
+   Ans: Output block.  
    
 5. Implementing and maintaining the state.
 -> Understand state locking and its importance in real-time.
