@@ -1,4 +1,4 @@
-# Terraform Associate Exam Important Topics
+# Terraform Associate Certification Important Topics
 Terraform Associate Certification Tips
 
 I have recently cleared the Terraform Associate Certification. Here are the steps you can follow to prepare effectively:
