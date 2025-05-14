@@ -3,7 +3,7 @@ Terraform Associate Certification Tips
 
 I have recently cleared the Terraform Associate Certification. Here are the steps you can follow to prepare effectively:
 
-Questions to answer : 57
+Questions to answer : 57__
 Type of questions expected: 
     a) True or False
     b) Multiple Choice questions
